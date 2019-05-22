@@ -5,6 +5,9 @@ sudo: false
 rvm:
   - 2.5
 
+services:
+  - mysql
+
 env:
   - RAILS=5-2-stable DB=sqlite3
   - RAILS=5-2-stable DB=mysql
