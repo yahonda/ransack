@@ -265,17 +265,17 @@ module Ransack
           # end
 
           it 'creates ransack attributes' do
-            s = Person.ransack(reversed_name_eq: 'htimS cirA')
+            s = Person.ransack(reversed_name_eq: 'remmeK eilliW')
             expect(s.result.size).to eq(1)
 
-            expect(s.result.first).to eq Person.where(name: 'Aric Smith').first
+            expect(s.result.first).to eq Person.where(name: 'Willie Kemmer').first
           end
 
           it 'can be accessed through associations' do
-            s = Person.ransack(children_reversed_name_eq: 'htimS cirA')
+            s = Person.ransack(children_reversed_name_eq: 'remmeK eilliW')
             expect(s.result.to_sql).to match(
               /#{quote_table_name("children_people")}.#{
-                 quote_column_name("name")} = 'Aric Smith'/
+                 quote_column_name("name")} = 'Willie Kemmer'/
             )
           end
 
