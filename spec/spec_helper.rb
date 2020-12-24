@@ -64,3 +64,5 @@ RSpec::Matchers.define :have_attribute_method do |expected|
     actual.attribute_method?(expected)
   end
 end
+
+ActiveRecord::Base.logger = ActiveSupport::Logger.new(STDOUT)
