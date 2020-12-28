@@ -21,7 +21,7 @@ jobs:
           - 2.6.6
     env:
       DB: sqlite3
-      RAILS: ${{ matrix.rails }}
+      BUNDLE_GEMFILE: gemfiles/Gemfile.${{ matrix.rails }}
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby
@@ -49,7 +49,7 @@ jobs:
           - 2.6.6
     env:
       DB: mysql
-      RAILS: ${{ matrix.rails }}
+      BUNDLE_GEMFILE: gemfiles/Gemfile.${{ matrix.rails }}
       MYSQL_USERNAME: root
       MYSQL_PASSWORD: root
     steps:
@@ -86,7 +86,7 @@ jobs:
           - 2.6.6
     env:
       DB: postgres
-      RAILS: ${{ matrix.rails }}
+      BUNDLE_GEMFILE: gemfiles/Gemfile.${{ matrix.rails }}
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: postgres
       DATABASE_HOST: 127.0.0.1

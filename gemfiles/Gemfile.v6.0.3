@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gemspec
+gemspec path: "../"
 
 gem 'rake'
 gem 'faker', '~> 1.0'
@@ -9,7 +9,7 @@ gem 'mysql2', '~> 0.5.2'
 gem 'pry', '~> 0.12.2'
 gem 'byebug'
 
-git 'https://github.com/rails/rails.git', :branch => 'master' do
+git 'https://github.com/rails/rails.git', :tag => 'v6.0.3' do
   gem 'activesupport'
   gem 'activemodel'
   gem 'activerecord', require: false
@@ -28,3 +28,6 @@ group :rubocop do
   # https://github.com/rubocop-hq/rubocop/pull/7869
   gem 'rubocop', '=0.81.0', require: false
 end
+
+
+
